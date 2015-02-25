@@ -38,9 +38,14 @@ client.setRequestHeader("Content-Type", "text/plain");
 
 client.send(); // client.send(rds);
 
-if (client.readyState==4 && client.status == 200){
-    alert("The request succeeded!\n\nThe response representation was:\n\n" + client.responseText);
+client.onreadystatechange = function() {
+  if (client.readyState==4 && client.status == 200){
+    if(client.responseText != null) {
+      // SUCESS! 
+      //client.responseText
+    } else {}// fail nothing sent back
+  } else {
+    //Fail
+    // check client.status / client.statusText
+  }  
 }
-else {
-    alert("The request did not succeed!\n\nThe response status was: " + client.status + " " + client.statusText + ".");
-}  

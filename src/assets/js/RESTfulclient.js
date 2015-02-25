@@ -20,13 +20,18 @@ else  {// code for IE6, IE5
 //open(method,url,async)
 //async: true (asynchronous) or false (synchronous)
 //There are 4 verbs or rather opperators to use with a RESTful API
-// Put 
+
+GET: retrieves information from the specified source (you just saw this one!)
+
+
+
+// PUT: updates existing information of the specified source. 
 client.open("PUT", url, false); 
-// Get
+// GET: retrieves information from the specified source.
 client.open("GET", url, true);
-// Post
+// POST: sends new information to the specified source.
 client.open("POST", url, true);
-// Delete
+// DELETE: removes existing information from the specified source.
 client.open("DELETE", url, false);
 
 client.setRequestHeader("Content-Type", "text/plain");

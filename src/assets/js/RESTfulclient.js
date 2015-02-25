@@ -48,4 +48,4 @@ client.onreadystatechange = function() {
     //Fail
     // check client.status / client.statusText
   }  
-}
+};
